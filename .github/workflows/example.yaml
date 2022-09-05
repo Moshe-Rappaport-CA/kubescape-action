@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: kubescape/github-action@main
+      - uses: Moshe-Rappaport-CA/github-action@main
         with:
           args: "--format junit --output results.xml"
           files: "examples/kubernetes-manifests/*.yaml"

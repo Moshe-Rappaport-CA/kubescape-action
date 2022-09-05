@@ -15,6 +15,7 @@ jobs:
           files: "examples/kubernetes-manifests/*.yaml"
           framework: |
             nsa,devopsbest
+          threshold: "50"
           # control: |
           #   Configured liveness probe,Pods in default namespace,Bash/cmd inside container
       - name: Archive kubescape scan results

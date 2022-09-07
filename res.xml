@@ -3,8 +3,8 @@
         <properties>
             <property name="riskScore" value="100.00"></property>
         </properties>
-        <testcase classname="Kubescape" status="failed" name="Images from allowed registry" time="">
-            <failure message="Remediation: You should enable all trusted repositories in the parameters of this control.&#xA;More details: https://hub.armosec.io/docs/c-0078&#xA;&#xA;apiVersion: apps/v1; kind: Deployment; namespace: ns; name: test" type="Control"></failure>
+        <testcase classname="Kubescape1" status="failed" name="Images from allowed registry" time="">
+            <failure message="Remediation: You should enable all trusted repositories in the parameters of this control.&#xA;More details: https://hub.armosec.io/docs/c-0078&#xA;&#xA;apiVersion: apps/v1;&#xAkind: Deployment;&#xAnamespace: ns;&#xAname: test" type="Control"></failure>
         </testcase>
     </testsuite>
 </testsuites>

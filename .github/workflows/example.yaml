@@ -14,7 +14,7 @@ jobs:
           args: "--format junit --output results.xml"
           files: "examples2/*.yaml"
           control: |
-            "Images from allowed registry "
+            "Images from allowed registry"
           threshold: "50"
           # control: |
           #   Configured liveness probe,Pods in default namespace,Bash/cmd inside container

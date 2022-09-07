@@ -3,7 +3,7 @@
         <properties>
             <property name="riskScore" value="100.00"></property>
         </properties>
-        <testcase classname="Kubescape1" status="failed" name="Images from allowed registry" time="">
+        <testcase classname="examples/kubernetes-manifests/adservice.yaml" status="failed" name="Images from allowed registry" time="">
             <failure message="Remediation: You should enable all trusted repositories in the parameters of this control.&#xA;More details: https://hub.armosec.io/docs/c-0078&#xA;&#xA;apiVersion: apps/v1&#xA;kind: Deployment&#xA;namespace: ns&#xA;name: test" type="Control"></failure>
         </testcase>
     </testsuite>

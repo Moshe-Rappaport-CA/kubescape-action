@@ -12,8 +12,8 @@ jobs:
       - uses: Moshe-Rappaport-CA/github-action@main
         with:
           args: "--format junit --output results.xml"
-          framework: |
-            NSA
+          # framework: |
+          #   NSA
           files: "examples/*.yaml"
 #           control: |
 #             "Images from allowed registry"

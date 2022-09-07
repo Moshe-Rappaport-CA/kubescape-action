@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: test
   namespace: ns
+  
   labels:
     app: test
     tier: backend

@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test
+  namespace: ns
+  labels:
+    app: test
+    tier: backend
+    phase: dev
+    version: "1.0.0"
+    owner: test-owner
+    env: dev
+    app.kubernetes.io/name: test
+    app.kubernetes.io/instance: test-instance
+    app.kubernetes.io/version: "1.0.0"
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/part-of: test-project
+    app.kubernetes.io/managed-by: kubectl
+    app.kubernetes.io/created-by: test-creator
+spec:
+  selector:
+    matchLabels:
+      app: test
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: test
+        tier: backend
+        phase: dev
+        version: "1.0.0"
+        owner: test-owner
+        env: dev
+        app.kubernetes.io/name: test
+        app.kubernetes.io/instance: test-instance
+        app.kubernetes.io/version: "1.0.0"
+        app.kubernetes.io/component: backend
+        app.kubernetes.io/part-of: test-project
+        app.kubernetes.io/managed-by: kubectl
+        app.kubernetes.io/created-by: test-creator
+    spec:
+      containers:
+        - name: test
+          imagePullPolicy: Never
+          image: local/test:dev
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          resources:
+            requests:
+              memory: 1Mi
+              cpu: 200m
+            limits:
+              memory: 2Mi
+              cpu: 250m
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 100000
+            runAsGroup: 100000
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL

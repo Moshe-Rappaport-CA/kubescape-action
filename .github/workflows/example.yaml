@@ -12,7 +12,7 @@ jobs:
       - uses: Moshe-Rappaport-CA/github-action@main
         with:
           args: "--format junit --output results.xml"
-          files: "examples2/*.yaml"
+          files: "example2/*.yaml"
           control: |
             "Images from allowed registry"
           threshold: "50"

@@ -12,9 +12,11 @@ jobs:
       - uses: Moshe-Rappaport-CA/github-action@main
         with:
           args: "--format junit --output results.xml"
+          framework: |
+            NSA
           files: "example2/*.yaml"
-          control: |
-            "Images from allowed registry"
+#           control: |
+#             "Images from allowed registry"
           threshold: "50"
           # control: |
           #   Configured liveness probe,Pods in default namespace,Bash/cmd inside container
@@ -28,12 +30,12 @@ jobs:
         if: always()
         with:
           report_paths: "*.xml" 
-  junit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Publish Unit Test Results
-        uses: mikepenz/action-junit-report@v2
-        if: always()
-        with:
-          report_paths: "*.xml" 
+#   junit:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@master
+#       - name: Publish Unit Test Results
+#         uses: mikepenz/action-junit-report@v2
+#         if: always()
+#         with:
+#           report_paths: "*.xml" 

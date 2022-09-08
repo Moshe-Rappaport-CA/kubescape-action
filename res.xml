@@ -6,5 +6,8 @@
         <testcase classname="kubescape1" status="failed" name="Images from allowed registry" time="" file="kubescape-action\example2\test.yaml" line="2">
             <failure message="Remediation: You should enable all trusted repositories in the parameters of this control.&#xA;More details: https://hub.armosec.io/docs/c-0078&#xA;&#xA;apiVersion: apps/v1&#xA;kind: Deployment&#xA;namespace: ns&#xA;name: test&#xA;fixPath=spec.template.spec.containers[0].image" type="Control"></failure>
         </testcase>
+        <testcase classname="Resource" status="failed" name="ns/Deployment/test" time="">
+            <failure message= "file: kubescape-action\example2\test.yaml.&#xA;&#xA;control id: C-0078&#xA;conrol name: Images from allowed registry&#xA;Remediation: You should enable all trusted repositories in the parameters of this control.&#xA;More details: https://hub.armosec.io/docs/c-0078&#xA;&#xA;control id: C-0001#xA;conrol name: Forbidden Container Registries&#xA;Remediation: Limit the registries from which you pull container images from.&#xA;More details: https://hub.armosec.io/docs/c-0001#xA;&#xA;" type="Control"></failure>
+        </testcase>
     </testsuite>
 </testsuites>

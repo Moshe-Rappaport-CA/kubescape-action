@@ -9,6 +9,7 @@
         <properties></properties>
         <testcase name="resourceName" status="failed" time="">
             <failure message="Paths:&#xA;&#xA;" type="Control"></failure>
+            <failure message="Paths:&#xA;&#xA;" type="Control"></failure>
         </testcase>
         <testcase classname="resourceName2" status="failed" time="">
             <failure message="Paths:&#xA;&#xA;" type="Control"></failure>

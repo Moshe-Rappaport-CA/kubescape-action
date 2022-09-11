@@ -7,7 +7,7 @@
     </testsuite>
     <testsuite name="example2/test.yaml" disabled="0" errors="0" failures="0" hostname="" id="1" skipped="" time="" timestamp="2022-09-11 13:55:39.239544 +0000 UTC">
         <properties></properties>
-        <testcase classname="" status="failed" name="example2/test.yaml" time="">
+        <testcase classname="example2/test.yaml" status="failed" name="" time="">
             <failure message="Resource: kind=Deployment/namespace=ns/; name=test&#xA;&#xA;Test: Images from allowed registry&#xA;Remediation: You should enable all trusted repositories in the parameters of this control.&#xA;Link for more details: https://hub.armosec.io/docs/c-0078&#xA;Failed paths: &#xA; - spec.template.spec.containers[0].image&#xA;&#xA;Test: Ingress and Egress blocked&#xA;Remediation: Define a network policy that restricts ingress and egress connections.&#xA;Link for more details: https://hub.armosec.io/docs/c-0030&#xA;&#xA;Test: Image pull policy on latest tag&#xA;Remediation: Set ImagePullPolicy to Always in all PODs found by this control.&#xA;Link for more details: https://hub.armosec.io/docs/c-0075&#xA;Failed paths: &#xA; - spec.template.spec.containers[0].image&#xA; - spec.template.spec.containers[0].imagePullPolicy&#xA;&#xA;" type="Resources"></failure>
         </testcase>
     </testsuite>

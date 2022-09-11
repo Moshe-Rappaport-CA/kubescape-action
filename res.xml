@@ -7,7 +7,7 @@
     </testsuite>
     <testsuite name="filename" disabled="0" errors="0" failures="0" hostname="" id="2" skipped="" time="" timestamp="2022-09-11 09:33:57.56087664 +0000 UTC">
         <properties></properties>
-        <testcase classname="resourceName" status="failed" time="">
+        <testcase name="resourceName" status="failed" time="">
             <failure message="Paths:&#xA;&#xA;" type="Control"></failure>
         </testcase>
         <testcase classname="resourceName2" status="failed" time="">
